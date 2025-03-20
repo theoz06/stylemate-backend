@@ -5,7 +5,7 @@ public enum GenderEnumService {
 
     private final String gender;
 
-    private GenderEnumService(String gender){
+    GenderEnumService(String gender){
         this.gender = gender;
     }
 
