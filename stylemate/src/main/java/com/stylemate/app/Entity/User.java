@@ -27,6 +27,9 @@ public class User {
     @Size(min = 3, message = "Name must be at least 3 characters long")
     private String name;
 
+    @NotNull(message = "Gender is required")
+    private String gender;
+
     @NotNull(message = "Email is required")
     @Email(message = "Invalid email format")
     private String email;
