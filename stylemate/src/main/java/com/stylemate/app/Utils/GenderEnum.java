@@ -1,4 +1,4 @@
-package main.java.com.stylemate.app.Utils;
+package com.stylemate.app.Utils;
 
 
 public enum GenderEnum {
