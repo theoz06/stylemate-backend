@@ -15,8 +15,9 @@ import com.stylemate.app.Service.GenderEnumService;
 public class GenderEnumController {
 
     @GetMapping("/list")
-    public List<GenderEnum> getAllGenders() {
+    public List<String> getAllGenders() {
         return Arrays.stream(GenderEnumService.values())
+                .map(GenderEnumService::getGenderEnum)
                 .collect(Collectors.toList());
     }
 }

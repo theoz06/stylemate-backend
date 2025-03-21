@@ -9,7 +9,7 @@ public enum GenderEnumService {
         this.gender = gender;
     }
 
-    public String getGender(){
+    public String getGenderEnum(){
         return gender;
     }
 
