@@ -10,6 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import javax.persistence.OneToMany;
 import javax.persistence.CascadeType;
 
@@ -30,6 +32,7 @@ public class ColorCategory {
     private String description;
 
     @OneToMany(mappedBy = "colorCategory", cascade = CascadeType.ALL , orphanRemoval = true)
+    @JsonManagedReference
     private List<Color> colors = new ArrayList<>();
     
 }
