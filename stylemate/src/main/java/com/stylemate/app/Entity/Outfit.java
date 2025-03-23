@@ -31,6 +31,8 @@ public class Outfit {
 
     private Boolean isFavorite;
 
+    private String image;
+
     @NotNull(message = "Category is required")
     @ManyToOne
     @JoinColumn(name = "subCategory_id")
