@@ -150,4 +150,12 @@ public class OutfitServiceImplement {
     
     }
 
+    public String delete(Integer id){
+
+            Outfit outfit = outfitRepository.findById(id).orElseThrow(()-> new RuntimeException("Outfit Not Found!"));
+            outfitRepository.delete(outfit);
+            filesHandlerService.delete(outfit.getImage());
+            return "Deleted Successfully";
+    }
+
 }
